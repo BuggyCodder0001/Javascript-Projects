@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Tax Calculator</title>
+
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    #parent {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    input[type="number"] {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input[type="number"]:focus {
+      box-shadow: 0 0 10px rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    button {
+      background: #06b6d4;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-weight: 500;
+      font-size: 1.2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 450px) {
+      #parent {
+        width: 90%;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <h1>Income Tax Calculator</h1>
+
+    <form action="">
+      <label for="income">Income</label>
+      <input type="number" name="income" id="income" placeholder="Enter your annual income">
+      <button type="submit">Calculate</button>
+    </form>
+
+    <h2>Total Tax : <span id="tax-amount">0</span></h2>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
